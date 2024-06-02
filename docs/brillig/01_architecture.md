@@ -16,7 +16,7 @@ The decision to have Brillig operate over finite fields simplifies SNARK proving
 
 ## Bytecode Structure and Function
 
-Brillig bytecode acts as an alternate compilation target for a domain specific circuit language. It will be explored in more detail in another section of this document. The bytecode is available both standalone and as part of ACIR in the form of the Brillig opcode. It primarily operates on fixed register indices but also includes dedicated memory access operations. Designed as a minimal register machine, it supports conditional jumps, a lightweight callstack, and can access a flat memory array of field element cells, thereby fulfilling the core requirements of a low-level VM.
+Brillig bytecode acts as an alternate compilation target for a domain-specific circuit language. It will be explored in more detail in another section of this document. The bytecode is available both standalone and as part of ACIR in the form of the Brillig opcode. It primarily operates on fixed register indices but also includes dedicated memory access operations. Designed as a minimal register machine, it supports conditional jumps, a lightweight callstack, and can access a flat memory array of field element cells, thereby fulfilling the core requirements of a low-level VM.
 
 The `MAX_REGISTERS` is 2\*\*16.
 
