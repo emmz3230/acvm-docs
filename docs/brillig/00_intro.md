@@ -51,9 +51,9 @@ assert(
 )
 ```
 
-However, there is a problem with this pseudocode as it has been laid out so far. The statements above makes sense from the point of view of the verifier, but the prover does not know what the values of `byte_array` are implicitly. `byte_array[0]` could be full value of `x` while the rest of the byte array values are 0, or the array could be the valid byte array that we want. The prover must inject the correct values into the arithmetic constraint above. The prover can inject this information by performing the byte decomposition in an unconstrained environment.
+However, there is a problem with this pseudocode as it has been laid out so far. The statements above make sense from the point of view of the verifier, but the prover does not know what the values of `byte_array` are implicitly. `byte_array[0]` could be the full value of `x` while the rest of the byte array values are 0, or the array could be the valid byte array that we want. The prover must inject the correct values into the arithmetic constraint above. The prover can inject this information by performing the byte decomposition in an unconstrained environment.
 
-A ZK DSL does not just prove computation but proves that some computation was handled correctly. Thus, it is necessary that when we switch from performing some operation directly inside of a circuit to inside of an unconstrained environment that the appropriate constraints are still laid down elsewhere in the circuit. The note selection algorithm example at the top of this section follows the same methodology. We are not constraining the unconstrained execution, but rather its outputs.
+A ZK DSL does not just prove computation but also proves that some computation was handled correctly. Thus, it is necessary that when we switch from performing some operation directly inside of a circuit to inside of an unconstrained environment, the appropriate constraints are still laid down elsewhere in the circuit. The note selection algorithm example at the top of this section follows the same methodology. We are not constraining the unconstrained execution, but rather its outputs.
 
 Brillig provides a way to evaluate such unconstrained functions in a safe, general VM.
 
