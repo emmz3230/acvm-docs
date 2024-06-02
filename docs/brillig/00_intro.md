@@ -40,9 +40,10 @@ for i in 0..FIELD_SIZE_IN_BYTES {
 There are a couple problems with this approach.
 
 1. Bit operations in circuits are very inefficient and require lots of constraints.
+
 2. Finite fields are not inherently ordered, so any finite field `x` that we would want to perform a bit operation upon would have to be range constrained to some integer value. This ultimately defeats the purpose of being able to decompose any Field element to a byte array.
 
-Instead we can write out arithmetic constraints inside of our circuit that maintains we have a valid byte array. For a 254 bit finite field `x` we can write out the following pseudocode:
+Instead, we can write out arithmetic constraints inside of our circuit that ensure we have a valid byte array. For a 254-bit finite field `x` we can write out the following pseudocode:
 
 ```
 assert(
