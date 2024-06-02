@@ -38,11 +38,12 @@ The VM accepts four initialization parameters.
 The VM then processes each opcode according to their [specification](02_opcode_listing.md).
 
 If the VM reaches a foreign call instruction, it will first fetch the call's input according to the register information inside the instruction. Through an internal counter and the foreign call results supplied to the VM, the VM will determine whether the outputs have been resolved. If they have not been resolved, the VM will then pause and return a status containing the foreign call inputs. The caller of the VM should interpret the call information returned and update the Brillig process. Execution can then continue as normal. While technically the foreign call result is considered part of the VM's input along with bytecode and initial registers, it is practically an input to the program.
+
 Error and Exception Handling
 
 ---
 
-Failed asserts, represented by the TRAP opcode, during the execution of an unconstrained function, result in an error in the Brillig opcode, accompanied by data detailing the failure. In a hedged trust blockchain environment, a prover might still want to generate a 'valid' proof of an error result so that incorrectness can be correctly attributed. This emphasizes the importance of handling errors and exceptions within the context of a blockchain-based VM.
+Failed asserts, represented by the TRAP opcode, during the execution of an unconstrained function result in an error in the Brillig opcode, accompanied by data detailing the failure. In a hedged trust blockchain environment, a prover might still want to generate a 'valid' proof of an error result so that incorrectness can be correctly attributed. This emphasizes the importance of handling errors and exceptions within the context of a blockchain-based VM.
 
 ## Conclusion
 
