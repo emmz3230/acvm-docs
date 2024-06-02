@@ -37,8 +37,7 @@ The VM accepts four initialization parameters.
 
 The VM then processes each opcode according to their [specification](02_opcode_listing.md).
 
-If the VM reaches a foreign call instruction it will first fetch the call's input according to the register information inside of the instruction. Through an internal counter and the foreign call results supplied to the VM, the VM will determine whether the outputs have been resolved. If they have not been resolved, the VM will then pause and return a status containing the foreign call inputs. The caller of the VM should interpret the call information returned and update the Brillig process. Execution can then continue as normal. While technically the foreign call result is considered part of the VM's input along with bytecode and initial registers, it is practically an input to the program.
-
+If the VM reaches a foreign call instruction, it will first fetch the call's input according to the register information inside the instruction. Through an internal counter and the foreign call results supplied to the VM, the VM will determine whether the outputs have been resolved. If they have not been resolved, the VM will then pause and return a status containing the foreign call inputs. The caller of the VM should interpret the call information returned and update the Brillig process. Execution can then continue as normal. While technically the foreign call result is considered part of the VM's input along with bytecode and initial registers, it is practically an input to the program.
 Error and Exception Handling
 
 ---
