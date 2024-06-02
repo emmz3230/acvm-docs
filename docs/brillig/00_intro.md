@@ -8,7 +8,7 @@ Brillig is a general virtual machine architecture for usage with an NP complete 
 
 ## Why we need Brillig
 
-Zero-knowledge (ZK) domain-specific languages (DSL) enable developers to generate ZK proofs from their programs by compiling code down to the constraints of an NP complete language (such as R1CS or PLONKish languages). However, the hard bounds of a constraint system can be very limiting to the functionality of a ZK DSL, and integrating a general VM is very useful for the following reasons:
+Zero-knowledge (ZK) domain-specific languages (DSL) enable developers to generate ZK proofs from their programs by compiling code down to the constraints of an NP-complete language (such as R1CS or PLONKish languages). However, the hard bounds of a constraint system can be very limiting to the functionality of a ZK DSL, and integrating a general VM is very useful for the following reasons:
 
 1. Unconstrained execution
 
