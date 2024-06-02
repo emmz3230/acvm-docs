@@ -29,7 +29,7 @@ if get_balance() > min_amount {
 
 Fetching information from somewhere external to a circuit can also be used to enable developers to improve circuit efficiency.
 
-For example, we may have a finite field which we want to transform to a byte array for use somewhere else in our circuit. To convert the field to a byte array in our circuit would require looping over the field's size in bytes and performing multiple bit operations. Such as in the pseudocode below where `x` is a finite field:
+For example, we may have a finite field which we want to transform to a byte array for use somewhere else in our circuit. To convert the field to a byte array in our circuit would require looping over the field's size in bytes and performing multiple bit operations. Such as in the pseudocode below, where `x` is a finite field:
 
 ```
 for i in 0..FIELD_SIZE_IN_BYTES {
