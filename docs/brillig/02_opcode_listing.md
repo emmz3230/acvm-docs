@@ -327,8 +327,11 @@ The `Trap` opcode is used to interrupt the normal flow of execution if a runtime
 The `Stop` opcode is used to halt the execution of the program. It does not require any parameters.
 
 It should be used to exit from the outer Brillig program, while most of the Brillig program should use the "Return" opcode.
+
 There is no particular requirement on a Brillig program about what states they are allowed to "Stop" in, however,
-any system using Brillig may impose additional semantics on the final Brilig memory and registers.
+
+any system using Brillig may impose additional semantics on the final Brillig memory and registers.
+
 In this case, a bytecode emitter should make sure that the calling convention of the Brillig program is followed before Stop'ing.
 
 **Wire format example:**
