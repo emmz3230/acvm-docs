@@ -47,4 +47,4 @@ Failed asserts, represented by the TRAP opcode, during the execution of an uncon
 
 ## Conclusion
 
-The Brillig VM provides a flexible and efficient environment for executing unconstrained code in a circuit environment. By thoughtfully integrating with snark provers and blockchain technology, and with careful attention to error handling, Brillig fulfills a key role within the Noir programming ecosystem.
+The Brillig VM provides a flexible and efficient environment for executing unconstrained code in a circuit environment. By thoughtfully integrating with snark provers and blockchain technology and paying careful attention to error handling, Brillig fulfills a key role within the Noir programming ecosystem.
